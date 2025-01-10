@@ -65,7 +65,7 @@ const headerMenus = computed(() => {
       <GlobalBreadcrumb v-if="!appStore.isMobile" class="ml-12px" />
     </div>
     <div class="h-full flex-y-center justify-end" style="-webkit-app-region: no-drag">
-      <GlobalSearch />
+      <GlobalSearch v-if="false" />
       <!-- <FullScreen v-if="!appStore.isMobile" :full="isFullscreen" @click="toggle" /> -->
       <LangSwitch
         :lang="appStore.locale"
@@ -75,7 +75,7 @@ const headerMenus = computed(() => {
         :theme-schema="themeStore.themeScheme"
         :is-dark="themeStore.darkMode"
         @switch="themeStore.toggleThemeScheme" />
-      <UserAvatar />
+      <UserAvatar  />
       <WindowMinimize />
       <WindowMaximize @click="toggle" />
       <WindowClose />
